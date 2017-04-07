@@ -1,0 +1,73 @@
+body {
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+  transition: 3s;
+
+  .big-wrapper {
+    background: url(../images/wall/train.jpg) no-repeat fixed;
+    height: 100%;
+    transition: 3s;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+      .header-wrapper {
+        width: 1024px;
+        position: absolute;
+
+        .svgs {
+          padding-top: 7em;
+          width: 40px;
+
+          svg {
+            display: block;
+            width: 40px;
+            height: 5px;
+            padding: 5px;
+            cursor: pointer;
+          }
+
+        }
+
+        nav {
+          position: absolute;
+          font-family: "Julius Sans One", sans-serif;
+
+
+          ul {
+            margin: -4em 0 0 5em;
+
+
+            li {
+              display: none;
+              margin: 0 0.5em;
+              padding: 20px 30px;
+
+              background-color: rgba(255, 255, 255, 0.8);
+              border-radius: 100%;
+              transition: box-shadow 0.1s, top 0.1s;
+
+
+
+              a {
+                font-size: 22px;
+                text-shadow: 3px 0 3px #48aef0, 0 0 2em #25c7b6;
+                font-family: "Raleway", sans-serif; 
+
+                &:hover {
+                  border-bottom: 1px black solid;
+                }
+              }
+
+              &:hover {
+                background: linear-gradient(rgba(188, 201, 207, 0.7) 50%, rgba(37, 199, 182, 0.9) 90%);
+                cursor: pointer;
+              }
+            }
+          }
+
+        }
+      }
+
+    }
+  }

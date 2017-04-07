@@ -1,0 +1,151 @@
+.team {
+  background: url(../images/howl.jpg) no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+
+  .team-wrapper {
+    width: 1024px;
+    height: 55em;
+
+
+    h3{
+      padding: 1em;
+      color: #fff;
+      font-size: 2em;
+      font-weight: 300;
+      text-shadow: 3px 3px 4px #48aef0, 0 0 2em #25c7b6;
+      text-transform: uppercase;
+      text-align: center;
+
+      &:before {
+        position: absolute;
+        margin-bottom: 3px;
+        content: '';
+        border-top: 1px #48aef0 solid;
+        width: 12em;
+
+      }
+    }
+
+    .hayao {
+      position: absolute;
+      margin-top: 14em;
+      margin-left: 31em;
+
+
+      p {
+        word-spacing: 4.5em;
+        margin-top: -3.5em;
+        margin-left: -3.6em;
+        transition: 2s;
+        font-size: 3em;
+        color: #ffffff;
+        text-shadow: 3px 3px 4px #48aef0, 0 0 2em #25c7b6;
+      }
+
+      img {
+        width: 11em;
+        height: 16em;
+        border-radius: 3em;
+      }
+
+    }
+
+    ul {
+      .goro {
+        margin-top: -0.5em;
+        left: 37em;
+
+        p {
+          margin-left: -2.7em;
+        }
+      }
+
+      .hiromasa {
+        margin-top: 10em;
+        left: 10em;
+
+        p {
+          margin-left: -4.7em;
+        }
+      }
+
+      .morita {
+        margin-top: 32em;
+        left: 11em;
+      }
+
+      .suzuki {
+        margin-top: 35em;
+        left: 37em;
+
+        p {
+          margin-left: -3.5em;
+        }
+      }
+
+      .takahata {
+        margin-top: 32em;
+        left: 65em;
+
+        p {
+          margin-left: -2.4em;
+
+        }
+      }
+
+      .tomomi {
+        margin-top: 10em;
+        left: 65em;
+      }
+
+      li {
+        display: inline-block;
+        margin: 5em 6em;
+        position: absolute;
+
+        img:not(.hayao) {
+          width: 11em;
+          height: 11em;
+          border-radius: 6em;
+          animation: pulsation 10s linear alternate  infinite;
+        }
+
+        p {
+          position: relative;
+          word-spacing: 8em;
+          margin-top: -3.5em;
+          margin-left: -4.5em;
+          font-size: 1.5em;
+          transition: 2s;
+          color: #ffffff;
+          text-shadow: 3px 3px 4px #48aef0, 0 0 2em #25c7b6;
+          animation: word-spaces 10s linear alternate  infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulsation {
+  0% {
+    width: 8em;
+    height: 8em;
+  }
+  100% {
+    width: 11em;
+    height: 11em;
+  }
+}
+
+@keyframes word-spaces {
+  0% {
+    word-spacing: 6em;
+  }
+  100% {
+    word-spacing: 8em;
+  }
+}

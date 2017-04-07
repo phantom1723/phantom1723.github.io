@@ -1,0 +1,80 @@
+.hero {
+  padding: 5em 0 0 0;
+
+
+  .hero-wrapper {
+    width: 1024px;
+    padding-top: 150px;
+    text-align: center;
+
+    h3 {
+      margin-left: -11em;
+      color: #48aef0;
+      font-size: 2.5em;
+      text-shadow: 3px 3px 4px #000, 0 0 2em #25c7b6;
+      font-weight: 300;
+    }
+
+    h2 {
+      color: #0D1538;
+      text-transform: uppercase;
+      font-size: 5em;
+      text-shadow: 3px 3px 4px #48aef0, 0 0 2em #25c7b6;
+      font-weight: 100;
+
+      &:before {
+        position: absolute;
+        content: '';
+        border-top: 1px #48aef0 solid;
+        width: 8.3em;
+
+      }
+
+    }
+
+    p {
+      font-size: 2.5em;
+      margin-left: 14em;
+      margin-top: -0.5em;
+      color: #48aef0;
+      text-shadow: 3px 3px 4px #000, 0 0 2em #25c7b6;
+
+    }
+
+    img {
+      margin-top: 8em;
+      width: 200px;
+      margin-left: -115em;
+
+    }
+
+    .totoro-walk-right {
+      transform: scale(-1, 1);
+      animation: totoro-walk-right 20s linear infinite;
+    }
+
+    .totoro-walk-left {
+      transform: scale(1, 1);
+      animation: totoro-walk-left 20s linear infinite;
+    }
+
+    @keyframes totoro-walk-right {
+      0% {
+
+      }
+      100% {
+        margin-left: 80em;
+         }
+    }
+
+    @keyframes totoro-walk-left {
+      0% {
+        margin-left: 80em;
+      }
+      100% {
+        margin-left: -115em;
+      }
+      
+    }
+  }
+}

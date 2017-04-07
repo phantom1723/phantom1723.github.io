@@ -1,0 +1,82 @@
+/* line 1, ../../sass/landing/timeTo.scss */
+#timeTo {
+  background: url(../images/sea.jpg) no-repeat fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+/* line 8, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper {
+  width: 1024px;
+}
+/* line 11, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper .left {
+  position: absolute;
+  color: #0D1538;
+  font-size: 4em;
+  text-shadow: 3px 3px 4px #48aef0, 0 0 2em #25c7b6;
+}
+/* line 18, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper .before {
+  position: absolute;
+  margin-top: 5em;
+  margin-left: 3em;
+  color: #0D1538;
+  font-size: 4em;
+  text-shadow: 3px 3px 4px #48aef0, 0 0 2em #25c7b6;
+  font-weight: 300;
+}
+/* line 28, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper .numbers {
+  position: absolute;
+  margin-top: 7em;
+  margin-left: 3em;
+}
+/* line 32, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper .numbers li {
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 0.5em;
+  font-size: 3em;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+  text-shadow: 3px 3px 4px #48aef0, 0 0 2em #25c7b6;
+  transition: 1s;
+}
+/* line 44, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper .signature {
+  position: absolute;
+  margin-top: 14em;
+}
+/* line 47, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper .signature li {
+  display: inline-block;
+  margin-left: 3.5em;
+  font-size: 1.8em;
+  border-top: 1px black solid;
+}
+/* line 53, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper .signature .hour {
+  margin-left: 3.3em;
+}
+/* line 57, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper .signature .min {
+  margin-left: 1.9em;
+}
+/* line 61, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper .signature .sec {
+  margin-left: 1.6em;
+}
+/* line 66, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper img {
+  float: right;
+  width: 17em;
+  margin-right: 2em;
+}
+/* line 71, ../../sass/landing/timeTo.scss */
+#timeTo .timeTo-wrapper img:hover {
+  transform: rotateX(-360deg);
+  transition: 2s;
+}

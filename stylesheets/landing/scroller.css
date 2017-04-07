@@ -1,0 +1,34 @@
+/* line 1, ../../sass/landing/scroller.scss */
+.scroller-wrapper {
+  position: fixed;
+  bottom: 0px;
+  padding: 0px;
+  left: 51%;
+  margin-left: 500px;
+  z-index: 99991;
+}
+/* line 10, ../../sass/landing/scroller.scss */
+.scroller-wrapper .scroller {
+  height: 30px;
+  width: 80px;
+  background: rgba(188, 201, 207, 0.7);
+  display: block;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  text-decoration: none;
+  transition: all linear 0.2s;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 22, ../../sass/landing/scroller.scss */
+.scroller-wrapper .scroller:hover {
+  background: linear-gradient(rgba(188, 201, 207, 0.7) 50%, rgba(37, 199, 182, 0.9) 90%);
+  transition: all linear 0.2s;
+  color: #fff;
+}
+
+/* line 30, ../../sass/landing/scroller.scss */
+.sticky {
+  display: none;
+  transition: 2s;
+}
