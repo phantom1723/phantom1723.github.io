@@ -50,10 +50,6 @@
 
 	var _menu2 = _interopRequireDefault(_menu);
 
-	var _changeHeroBackground = __webpack_require__(2);
-
-	var _changeHeroBackground2 = _interopRequireDefault(_changeHeroBackground);
-
 	var _totoroWalk = __webpack_require__(3);
 
 	var _totoroWalk2 = _interopRequireDefault(_totoroWalk);
@@ -99,26 +95,6 @@
 	            }
 	        }, 100);
 	    });
-	})();
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	(function changeHeroBackground() {
-
-	    var images = ['totoro2.jpg', 'totoro3.jpg', 'wall-dragon.jpg', 'wall-howl.jpg', 'wall-howl3.jpg', 'wall-laputa2.jpg', 'wall-laputa3.jpg', 'wall-porco.jpg', 'wall-porcoRosso.jpg', 'wall-spiritedAway.jpg', 'wall-tihiro.jpg'];
-
-	    var bigWrapper = document.querySelector('.big-wrapper');
-
-	    var i = 0;
-	    setInterval(function () {
-	        bigWrapper.style.background = 'url(http://localhost:63342/gibli/images/wall/' + images[i] + ') no-repeat fixed';
-	        i++;
-	        if (i >= images.length) i = 0;
-	    }, 20000);
 	})();
 
 /***/ },
