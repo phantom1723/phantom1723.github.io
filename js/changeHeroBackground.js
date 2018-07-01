@@ -17,7 +17,7 @@
 
     let i = 0;
     setInterval(() => {
-        bigWrapper.style.background = 'url(http://localhost:63342/gibli/images/wall/' + images[i] + ') no-repeat fixed';
+        bigWrapper.style.background = 'url(../images/wall/' + images[i] + ') no-repeat fixed';
         i++;
         if (i >= images.length) i = 0;
     }, 20000);
