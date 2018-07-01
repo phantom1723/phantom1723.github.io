@@ -1,6 +1,6 @@
 
 (function timer() {
-    const timeend = new Date(2017,8,23);
+    const timeend = new Date(2019,1,01);
 
     let today = new Date();
     today = Math.floor((timeend-today) / 1000); if(today < 10) today = '0' + sec;
