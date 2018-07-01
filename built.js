@@ -126,7 +126,7 @@
 	'use strict';
 
 	(function timer() {
-	    var timeend = new Date(2017, 8, 23);
+	    var timeend = new Date(2019, 1, 01);
 
 	    var today = new Date();
 	    today = Math.floor((timeend - today) / 1000);if (today < 10) today = '0' + sec;
