@@ -42,72 +42,93 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	__webpack_require__(1);
+	__webpack_require__(2);
+	__webpack_require__(3);
+	__webpack_require__(4);
+	__webpack_require__(5);
+	__webpack_require__(6);
 
-	var _menu = __webpack_require__(1);
-
-	var _menu2 = _interopRequireDefault(_menu);
-
-	var _totoroWalk = __webpack_require__(3);
-
-	var _totoroWalk2 = _interopRequireDefault(_totoroWalk);
-
-	var _timer = __webpack_require__(4);
-
-	var _timer2 = _interopRequireDefault(_timer);
-
-	var _carousel = __webpack_require__(5);
-
-	var _carousel2 = _interopRequireDefault(_carousel);
-
-	var _scroller = __webpack_require__(6);
-
-	var _scroller2 = _interopRequireDefault(_scroller);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
-	'use strict';
-
-	function setStyle(target, styleName, value) {
+	
+	 function setStyle (target, styleName, value) {
 	    target.style[styleName] = value;
 	}
 
-	(function showMenu() {
-	    var svgs = document.querySelector('.svgs');
+	 (function showMenu() {
+	    const svgs = document.querySelector('.svgs');
 
-	    svgs.addEventListener('click', function () {
-	        var menu = document.querySelectorAll('.menu');
-	        var i = 0;
-	        setInterval(function () {
+	    svgs.addEventListener('click', function() {
+	        const menu = document.querySelectorAll('.menu');
+	        let i = 0;
+	        setInterval(() => {
 	            if (i < menu.length) {
 	                if (menu[i].style.display == 'inline-block') {
-	                    setStyle(menu[i], 'display', 'none');
-	                } else {
-	                    setStyle(menu[i], 'display', 'inline-block');
+	                    setStyle( menu[i], 'display', 'none');
 	                }
-	                i++;
-	            }
-	        }, 100);
+	                else {
+	                    setStyle( menu[i], 'display', 'inline-block');
+	                }
+	                i++; }
+
+	        }, 100)
 	    });
 	})();
 
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
 
-	'use strict';
+
+
+
+
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+	(function changeHeroBackground() {
+
+	    const images = [
+	        'totoro2.jpg',
+	        'totoro3.jpg',
+	        'wall-dragon.jpg',
+	        'wall-howl.jpg',
+	        'wall-howl3.jpg',
+	        'wall-laputa2.jpg',
+	        'wall-laputa3.jpg',
+	        'wall-porco.jpg',
+	        'wall-porcoRosso.jpg',
+	        'wall-spiritedAway.jpg',
+	        'wall-tihiro.jpg'];
+
+	    const bigWrapper = document.querySelector('.big-wrapper');
+
+	    let i = 0;
+	    setInterval(() => {
+	        bigWrapper.style.background = 'url(https://phantom1723.github.io/images/wall/' + images[i] + ') no-repeat fixed';
+	        i++;
+	        if (i >= images.length) i = 0;
+	    }, 20000);
+	})();
+
+
+
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
 
 	(function totoroWalk() {
-	    var totoro = document.querySelector('.totoro');
+	    const totoro = document.querySelector('.totoro');
 
-	    var flag = true;
-	    setInterval(function () {
+	    let flag = true;
+	    setInterval( () => {
 	        if (flag) {
 	            totoro.classList.remove('totoro-walk-right');
 	            totoro.classList.add('totoro-walk-left');
@@ -115,160 +136,173 @@
 	            totoro.classList.remove('totoro-walk-left');
 	            totoro.classList.add('totoro-walk-right');
 	        }
-	        flag = !flag;
+	        flag = !flag
 	    }, 20000);
 	})();
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
-	'use strict';
-
+	
 	(function timer() {
-	    var timeend = new Date(2019, 1, 01);
+	    const timeend = new Date(2019,8,23);
 
-	    var today = new Date();
-	    today = Math.floor((timeend - today) / 1000);if (today < 10) today = '0' + sec;
-	    var sec = today % 60;
-	    today = Math.floor(today / 60);if (sec < 10) sec = '0' + sec;
-	    var min = today % 60;
-	    today = Math.floor(today / 60);if (min < 10) min = '0' + min;
-	    var hour = today % 24;
-	    today = Math.floor(today / 24);if (hour < 10) hour = '0' + hour;
+	    let today = new Date();
+	    today = Math.floor((timeend-today) / 1000); if(today < 10) today = '0' + sec;
+	    let sec = today % 60;
+	    today = Math.floor(today / 60); if(sec < 10) sec = '0' + sec;
+	    let min = today % 60;
+	    today = Math.floor(today / 60); if(min < 10) min = '0' + min;
+	    let hour = today % 24;
+	    today = Math.floor(today / 24); if(hour < 10) hour = '0' + hour;
 
 	    document.querySelector('.days').innerHTML = today;
 	    document.querySelector('.hours').innerHTML = hour;
 	    document.querySelector('.minutes').innerHTML = min;
 	    document.querySelector('.seconds').innerHTML = sec;
 
-	    window.setTimeout(timer, 1000);
-	})();
+	    window.setTimeout(timer,1000);
+	    })();
+
 
 	(function changeTimerBackground() {
-	    var buble = document.querySelectorAll('.buble');
-	    var i = 0;
+	    const buble = document.querySelectorAll('.buble');
+	    let i = 0;
 
-	    setInterval(function () {
-	        var r = Math.floor(Math.random() * 255);
-	        var g = Math.floor(Math.random() * 255);
-	        var b = Math.floor(Math.random() * 255);
+	    setInterval(() => {
+	        let r = Math.floor(Math.random() * 255);
+	        let g = Math.floor(Math.random() * 255);
+	        let b = Math.floor(Math.random() * 255);
 
-	        buble[i++].style.backgroundColor = 'rgba(' + r + ',' + g + ',' + b + ', 0.6)';
+	            buble[i++].style.backgroundColor = 'rgba(' + r + ',' + g + ',' + b + ', 0.6)';
 	        if (i >= buble.length) i = 0;
+
 	    }, 1000);
 	})();
 
-/***/ },
+
+/***/ }),
 /* 5 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
-	'use strict';
+	const spinner = document.querySelector('.spinner');
+	const prev = document.querySelector('.prev');
+	const next = document.querySelector('.next');
+	const close = document.querySelectorAll('.close');
+	const items = document.querySelectorAll('.item');
+	const hiddenInformation = document.querySelectorAll('.hidden-information');
+	const worksWrapper = document.querySelector('.works-wrapper');
 
-	var spinner = document.querySelector('.spinner');
-	var prev = document.querySelector('.prev');
-	var next = document.querySelector('.next');
-	var close = document.querySelectorAll('.close');
-	var items = document.querySelectorAll('.item');
-	var hiddenInformation = document.querySelectorAll('.hidden-information');
-	var worksWrapper = document.querySelector('.works-wrapper');
-
-	var degree = 0;
-	var carouselSpinByItself = true;
+	let degree = 0;
+	let carouselSpinByItself = true;
 
 	(function carousel() {
 
-	    prev.addEventListener('click', function () {
+	    prev.addEventListener('click', () => {
 	        degree += 20;
 	        setStyle(spinner, 'transform', 'rotateY(' + degree + 'deg)');
-	    });
+	            });
 
-	    next.addEventListener('click', function () {
+	    next.addEventListener('click', () => {
 	        degree -= 20;
 	        setStyle(spinner, 'transform', 'rotateY(' + degree + 'deg)');
 	    });
 
-	    setInterval(function () {
+	    setInterval(() => {
 	        if (carouselSpinByItself == true) {
-	            degree -= 20;
-	            setStyle(spinner, 'transform', 'rotateY(' + degree + 'deg)');
+	                degree -= 20;
+	                setStyle(spinner, 'transform', 'rotateY(' + degree + 'deg)');
 	        }
 	    }, 3000);
 	})();
 
-	function setStyle(target, styleName, value) {
+
+
+	function setStyle (target, styleName, value) {
 	    target.style[styleName] = value;
 	}
 
+
 	(function onChoose() {
-	    addEventListener('click', function (event) {
-	        var itemId = +event.target.id;
+	    addEventListener('click', (event) => {
+	        const itemId = +event.target.id;
 
 	        if (!isNaN(itemId) && itemId != 0) {
 	            afterClickAtImage(itemId);
-	            close[itemId - 1].addEventListener('click', function () {
-	                return afterCloseHiddenInformation(itemId);
-	            });
+	            close[itemId - 1].addEventListener('click', () => afterCloseHiddenInformation(itemId));
 	        }
 	    });
 	})();
 
-	function afterClickAtImage(itemId) {
-	    carouselSpinByItself = false;
-	    setStyle(hiddenInformation[itemId - 1], 'display', 'block');
-	    setStyle(spinner, 'transform', 'rotateY(0deg)');
-	    setStyle(next, 'display', 'none');
-	    setStyle(prev, 'display', 'none');
-	    setStyle(worksWrapper, 'marginTop', '-25em');
 
-	    items.forEach(function (item) {
-	        setStyle(item, 'display', 'none');
-	        setStyle(item, 'animationName', 'disappear');
-	    });
+	function afterClickAtImage (itemId) {
+	     carouselSpinByItself = false;
+	     setStyle(hiddenInformation[itemId - 1], 'display', 'block');
+	     setStyle(spinner, 'transform', 'rotateY(0deg)');
+	     setStyle(next, 'display', 'none');
+	     setStyle(prev, 'display', 'none');
+	     setStyle(worksWrapper, 'marginTop', '-25em');
+
+	     items.forEach(item => {
+	     setStyle(item, 'display', 'none');
+	     setStyle(item, 'animationName', 'disappear');
+	     });
 	}
 
-	function afterCloseHiddenInformation(itemId) {
+	function afterCloseHiddenInformation (itemId) {
 	    carouselSpinByItself = true;
 
 	    setStyle(hiddenInformation[itemId - 1], 'display', 'none');
 
-	    items.forEach(function (item) {
+	    items.forEach( item =>  {
 	        setStyle(item, 'display', 'block');
 	    });
 
 	    setStyle(spinner, 'transform', 'rotateY(' + degree + 'deg)');
 	    setStyle(next, 'display', 'block');
 	    setStyle(prev, 'display', 'block');
-	    setStyle(worksWrapper, 'marginTop', '0');
+	    setStyle(worksWrapper, 'marginTop', '0')
 	}
 
-/***/ },
+
+
+
+
+
+/***/ }),
 /* 6 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
-	'use strict';
+	
+	(function scroll () {
+	    const scroller = document.querySelector('#scroll');
 
-	(function scroll() {
-	    var scroller = document.querySelector('#scroll');
-
-	    setInterval(function () {
-	        var posTop = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+	    setInterval(function() {
+	        const posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 	        if (posTop > 150) {
 	            scroller.classList.remove('sticky');
 	        } else scroller.classList.add('sticky');
 	    }, 20);
 
-	    scroller.addEventListener('click', function () {
-	        var top = window.pageYOffset;
+	    scroller.addEventListener('click', () => {
+	        let top = window.pageYOffset;
 
-	        setInterval(function () {
+	        setInterval (() => {
 	            if (top > 0) {
 	                window.scrollBy(0, -50);
 	                top -= 50;
 	            }
 	        }, 10);
 	    });
+
 	})();
 
-/***/ }
+
+
+
+
+
+
+/***/ })
 /******/ ]);
